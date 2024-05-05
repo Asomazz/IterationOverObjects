@@ -25,7 +25,7 @@ console.log(person);
 ********************************/
 
 const hasKey = (object, key) => {
-  if (object[key]) {
+  if (key in object) {
     return true;
   } else {
     return false;
@@ -72,9 +72,11 @@ const movies = [
   and iterates through it to log the titles of all the movies.
   ********************************/
 
-movies.forEach((movie) => {
-  console.log(movie.title);
-});
+const titleLogger = (movies) => {
+  movies.forEach((movie) => {
+    console.log(movie.title);
+  });
+};
 
 /******************************
       Q5) Create a function that accepts an array of objects called 'movies' 
